@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CompleteTheTarget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="app-title">CompleteTheTarget</h1>
+
+  <div class="container">
+
+    <!-- LEFT MAIN SECTION -->
+    <div class="main">
+
+      <h2>Progress Bar</h2>
+
+      <!-- Target Setting -->
+      <div class="target-box">
+        <input type="number" id="targetInput" placeholder="Set target points">
+        <button id="setTargetBtn">Set Target</button>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <p class="progress-text">
+        <span id="currentPoints">0</span> /
+        <span id="targetPoints">0</span>
+      </p>
+      <button id="changeTargetBtn" style="display:none; margin-bottom:20px;">
+  Change Target
+</button>
+
+
+      <!-- Add Points -->
+      <h3>Add Today's Points</h3>
+
+      <input type="number" id="pointsInput" placeholder="Enter points">
+      <button id="addPointsBtn">Add Point</button>
+
+    </div>
+
+    <!-- RIGHT HISTORY SECTION -->
+    <div class="history">
+      <h2>History</h2>
+      <ul id="historyList">
+        <!-- history items will come here -->
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
