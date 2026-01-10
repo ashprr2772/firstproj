@@ -1,5 +1,5 @@
 /* =========================
-   RESET & BASE STYLES
+   RESET & BASE
 ========================= */
 * {
   margin: 0;
@@ -9,9 +9,9 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #222;
-  padding: 30px;
+  background-color: #1e1e1e; /* dark background */
+  color: #f1f1f1;
+  padding: 20px;
 }
 
 /* =========================
@@ -19,8 +19,8 @@ body {
 ========================= */
 .app-title {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 35px;
+  font-size: 26px;
+  margin-bottom: 25px;
 }
 
 /* =========================
@@ -30,27 +30,34 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 /* =========================
-   LEFT MAIN CARD
+   CARDS
+========================= */
+.main,
+.history {
+  background-color: #2a2a2a;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #3a3a3a;
+}
+
+/* =========================
+   MAIN SECTION
 ========================= */
 .main {
   flex: 2;
-  background: #fff;
-  padding: 25px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
 }
 
 /* =========================
-   PROGRESS BAR (HERO)
+   PROGRESS BAR
 ========================= */
 .progress-container {
   width: 100%;
-  height: 45px;                 /* BIG BAR */
-  background-color: #eee;
+  height: 45px;
+  background-color: #444;
   border-radius: 30px;
   overflow: hidden;
   margin: 15px 0 10px 0;
@@ -59,15 +66,14 @@ body {
 .progress-bar {
   height: 100%;
   width: 0%;
-  background-color: red;        /* JS will change */
-  transition: width 0.5s ease, background-color 0.5s ease;
+  background-color: red;
+  transition: width 0.4s ease, background-color 0.4s ease;
 }
 
-/* Progress text */
 .progress-text {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* =========================
@@ -76,48 +82,62 @@ body {
 .target-box {
   display: flex;
   gap: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .target-box input {
   flex: 1;
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
 }
 
 .target-box button {
-  padding: 10px 15px;
-  cursor: pointer;
+  padding: 12px 16px;
 }
 
 /* =========================
-   ADD POINTS SECTION
+   INPUTS & BUTTONS
+========================= */
+input[type="number"] {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #505050;
+}
+
+/* =========================
+   ADD POINTS
 ========================= */
 .main h3 {
   margin-bottom: 10px;
 }
 
-.main input[type="number"] {
-  padding: 10px;
-  width: 220px;
-  margin-right: 10px;
-}
-
-.main button {
-  padding: 10px 18px;
-  cursor: pointer;
+#pointsInput {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 /* =========================
-   RIGHT HISTORY CARD
+   HISTORY
 ========================= */
 .history {
   flex: 1;
-  background: #fff;
-  padding: 25px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  max-height: 420px;
+  max-height: 450px;
   overflow-y: auto;
 }
 
@@ -131,15 +151,52 @@ body {
 
 .history li {
   padding: 10px 5px;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
+  border-bottom: 1px solid #444;
+  font-size: 15px;
 }
 
 /* =========================
-   RESPONSIVE (MOBILE)
+   MOBILE OPTIMIZATION
 ========================= */
 @media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
   .container {
     flex-direction: column;
   }
+
+  .app-title {
+    font-size: 24px;
+  }
+
+  .progress-container {
+    height: 50px;
+  }
+
+  .progress-text {
+    font-size: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .target-box {
+    flex-direction: column;
+  }
 }
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
